@@ -67,6 +67,35 @@
 }
 .h-section--light { color: #fff; }
 
+.sponsor-title {
+    border-bottom: 1px solid #666;
+    height: 1.5rem;
+    text-align: center;
+    margin: 1rem 0 2rem;
+}
+.sponsor-title__body {
+    color: #666;
+    font-size: 1.75rem;
+    font-family: $fontHeadlineFamily;
+    font-weight: 300;
+    text-transform: uppercase;
+    display: inline-block;
+    border: 1px solid #666;
+    border-width: 0 1px;
+    padding: 0 1.5rem;
+    background-color: $white;
+}
+.sponsor-list {
+    justify-content: space-around;
+    align-items: center;
+}
+.sponsor-list img {
+    max-width: inherit;
+}
+.sponsor-item {
+    margin: 1rem;
+}
+
 .h-category {
     padding: 0.5rem;
     color: #fff;
