@@ -143,6 +143,108 @@
                         </div>
                     </div>
                 </section>
+                <section class="l-section">
+                    <div class="container">
+                        <h1 class="h-section">Schedule</h1>
+                        <ul class="nav nav--block schedule-day-list">
+                            <li>
+                                <a href="#" class="schedule-day-item schedule-day-item--active" data-target-panel="schedule-node-day">
+                                    <h2 class="h-header schedule-day-list__title">Node.js Day</h2>
+                                    <span class="schedule-day-list__date">Thursday Oct. 12th</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="schedule-day-item" data-target-panel="schedule-javascript-day">
+                                    <h2 class="h-header schedule-day-list__title">JavaScript Day</h2>
+                                    <span class="schedule-day-list__date">Friday Oct. 13th</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="schedule schedule--active" id="schedule-node-day">
+                            <div class="schedule-time">8:00am - 9:15am</div>
+                            <div class="schedule-announcement">
+                                <h3>Registration Opens</h3>
+                            </div>
+                            <div class="schedule-time">9:15am - 9:30am</div>
+                            <div class="schedule-announcement">
+                                <h3>Welcome to Empire Conf</h3>
+                            </div>
+                            <div class="schedule-time">9:35am - 9:55am</div>
+                            <ul class="nav nav--stacked schedule-slot">
+                                <li class="schedule-session">
+                                    <h3 class="h-header h-trimmed h-schedule-session">Lending Privilege</h3>
+                                    <img src="https://speak.empireconf.org/uploads/8Ny4CPBxqiP1yzZqcK0ztkYHLyDPLJI8ywrGjBvb.jpeg" alt="Anjuan Simmons" class="schedule-speaker__photo">
+                                    <h5 class="h-header schedule-speaker__name">Anjuan Simmons</h5>
+                                    <div class="schedule-session__body">
+                                        <p>Privilege is access to societal and economic benefits based on a characteristic you possess. The most well understood forms of privilege are the ones most people don’t choose for themselves like racial, gender, and physical privilege, but there are also selected privileges like religion, sexuality, and education.</p>
+                                        <p>This session will teach you how to lend your privilege. You’ll learn the various types of privilege lending including credibility lending (where you attach your name to a project being undertaken by someone without privilege) and access lending (where you provide access to a location or event for someone without privilege). These different types of privilege lending will be illustrated through well known examples and an explanation of how they can be applied to software development.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!-- Speaker 1 -->
+                            <div class="schedule-time">10:00am - 10:25am</div>
+                            <!-- Speaker 2 -->
+                            <div class="schedule-time">10:30am - 10:50am</div>
+                            <!-- Speaker 3 -->
+                            <div class="schedule-time">10:50am - 11:15am</div>
+                            <div class="schedule-announcement">
+                                <h3>Coffee/Snack Break</h3>
+                            </div>
+                            <div class="schedule-time">11:20am - 11:40am</div>
+                            <!-- Speaker 4 -->
+                            <div class="schedule-time">11:45am - 12:05pm</div>
+                            <!-- Speaker 5 -->
+                            <div class="schedule-time">12:10pm - 12:30pm</div>
+                            <!-- Speaker 6 -->
+                            <div class="schedule-time">12:35pm - 2:10pm</div>
+                           <div class="schedule-announcement">
+                                <h3>Lunch</h3>
+                            </div>
+                            <div class="schedule-time">2:15pm - 3:35pm</div>
+                            <!-- Workshops -->
+                            <div class="schedule-time">3:40pm - 3:55pm</div>
+                            <div class="schedule-announcement">
+                                <h3>Snack/Sanity Break</h3>
+                            </div>
+                            <div class="schedule-time">4:00pm - 5:30pm</div>
+                            <!-- Workshops Part 2 Electric Boogaloo -->
+                        </div>
+                        <div class="schedule" id="schedule-javascript-day">
+                            <div class="schedule-time">8:00am - 9:15am</div>
+                            <!-- Breakfast is served -->
+                            <div class="schedule-time">9:15am - 9:30am</div>
+                            <!-- Welcome Back -->
+                            <div class="schedule-time">9:35am - 9:55am</div>
+                            <!-- Speaker 1 -->
+                            <div class="schedule-time">10:00am - 10:25am</div>
+                            <!-- Speaker 2 -->
+                            <div class="schedule-time">10:30am - 10:50am</div>
+                            <!-- Speaker 3 -->
+                            <div class="schedule-time">10:50am - 11:15am</div>
+                            <div class="schedule-announcement">
+                                <h3>JS Family Photo AND Coffee/Snack Break</h3>
+                            </div>
+                            <div class="schedule-time">11:20am - 11:40am</div>
+                            <!-- Speaker 4 -->
+                            <div class="schedule-time">11:45am - 12:05pm</div>
+                            <!-- Speaker 5 -->
+                            <div class="schedule-time">12:10pm - 12:30pm</div>
+                            <!-- Speaker 6 -->
+                            <div class="schedule-time">12:35pm - 2:10pm</div>
+                           <div class="schedule-announcement">
+                                <h3>Lunch</h3>
+                            </div>
+                            <div class="schedule-time">2:15pm - 3:35pm</div>
+                            <!-- Workshops -->
+                            <div class="schedule-time">3:40pm - 3:55pm</div>
+                            <div class="schedule-announcement">
+                                <h3>Snack/Sanity Break</h3>
+                            </div>
+                            <div class="schedule-time">4:00pm - 5:30pm</div>
+                            <!-- Workshops Part 2 Electric Boogaloo -->
+                        </div>
+                    </div>
+                </section>
                 <section class="l-section l-cta">
                     <div class="container">
                         <h1 class="h-section h-section--light">Stay up to date with Empire Conf 2017</h1>
@@ -265,6 +367,17 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>
             $(function() {
+                $('.schedule-day-item').on('click', function (e) {
+                    var $tab = $(this);
+                    e.preventDefault();
+
+                    $('.schedule-day-item--active').removeClass('schedule-day-item--active');
+                    $tab.addClass('schedule-day-item--active');
+
+                    $('.schedule--active').removeClass('schedule--active');
+                    $('#' + $tab.data('target-panel')).addClass('schedule--active');
+                });
+
                 $('.navbar-toggle').on('click', function (e) {
                     $('.page-frame').toggleClass('active');
                     e.stopPropagation();

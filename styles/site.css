@@ -4103,145 +4103,105 @@ a:hover {
 
 .schedule {
   margin-bottom: 1rem;
+  display: none;
 }
 
-.schedule-row > .schedule-session {
-  background: rgba(240, 240, 240, 0.5);
-  font-size: 0.9rem;
-}
-.schedule-row > .schedule-session:hover {
-  background: rgba(255, 247, 188, 0.1);
-}
-
-.schedule-block--center {
-  text-align: center;
-}
-
-.schedule-block--middle > h5 {
-  line-height: 6rem;
-  margin-bottom: 0;
-}
-
-.schedule-session {
-  border-left: 4px solid transparent;
-  margin: 0.2rem 0;
-  padding: 0.5rem;
-  min-height: 7rem;
-}
-
-.schedule-time {
-  background: #ccc;
-  text-align: center;
-  padding: 0.25rem;
-}
-
-.schedule-location,
-.schedule-talk,
-.schedule-speaker {
-  line-height: inherit;
-  margin: 0.5rem 0;
+.schedule--active {
   display: block;
 }
 
-.schedule-talk > a {
-  color: #333;
+.schedule-day-list .schedule-day-item {
+  padding: 0.5rem 2.5rem;
+}
+
+.schedule-day-item {
+  background-color: #424242;
+  color: #F7F7F2;
   text-decoration: none;
 }
-
-.grid--narrow > .schedule-row > .grid__item {
-  padding-left: 4px;
+.schedule-day-item > .schedule-day-list__title {
+  color: #F7F7F2;
 }
 
-.legend-key {
-  text-align: center;
-  margin: 1rem 0;
+.schedule-day-item--active {
+  background-color: #F1E478;
+  color: #424242;
+  position: relative;
 }
-
-.legend {
-  margin: 0 0.5rem;
-  text-transform: uppercase;
-  white-space: nowrap;
+.schedule-day-item--active > .schedule-day-list__title {
+  color: #424242;
 }
-.legend:before {
-  content: "";
+.schedule-day-item--active::before {
+  border: none;
+  content: '';
   display: inline-block;
-  height: 1rem;
-  width: 1rem;
-  vertical-align: middle;
-  background: #DDD;
-  margin: -0.5rem 0.5em 0 0;
+  height: 0;
+  width: 0;
+  border-left: 0.8rem solid transparent;
+  border-right: 0.8rem solid transparent;
+  border-top: 0.8rem solid #F1E478;
+  position: absolute;
+  bottom: -0.8rem;
+  left: 40%;
 }
 
-.legend--sycamore:before {
-  background: #a6858b;
+.schedule-day-list__title {
+  margin-bottom: 1rem;
 }
 
-.legend--sycamore:hover:before {
-  background: #c06b7a;
+.schedule-day-list__date {
+  font-weight: normal;
 }
 
-.schedule-session--sycamore {
-  border-color: #a6858b;
-}
-.schedule-session--sycamore:hover {
-  border-color: #c06b7a;
-}
-.schedule-session--sycamore > .schedule-talk > a:hover {
-  color: #c06b7a;
+.schedule-time {
+  background: #541388;
+  color: #F7F7F2;
+  text-align: center;
+  padding: 0.25rem;
+  margin: 0.5rem 0;
 }
 
-.legend--acacia:before {
-  background: #8d9e54;
+.schedule-announcement {
+  text-align: center;
+}
+.schedule-announcement > h3 {
+  font-size: 1rem;
+  margin: 0.75rem 0;
 }
 
-.legend--acacia:hover:before {
-  background: #9dbc36;
+.schedule-session {
+  border-left: 2px solid #ddd;
+  padding: 1rem 2rem 0.1rem 6rem;
+  margin-left: 4rem;
+  position: relative;
 }
 
-.schedule-session--acacia {
-  border-color: #8d9e54;
-}
-.schedule-session--acacia:hover {
-  border-color: #9dbc36;
-}
-.schedule-session--acacia > .schedule-talk > a:hover {
-  color: #9dbc36;
+.schedule-session > .schedule-session__body {
+  font-size: 0.85rem;
 }
 
-.legend--buckthorn:before {
-  background: #b0b5bf;
+.schedule-session__body > p {
+  margin-bottom: 0.75rem;
 }
 
-.legend--buckthorn:hover:before {
-  background: #9eafd1;
+.schedule-session > .schedule-speaker__name {
+  margin-bottom: 1rem;
+  text-transform: none;
+  color: #D90368;
 }
 
-.schedule-session--buckthorn {
-  border-color: #b0b5bf;
-}
-.schedule-session--buckthorn:hover {
-  border-color: #9eafd1;
-}
-.schedule-session--buckthorn > .schedule-talk > a:hover {
-  color: #9eafd1;
+.schedule-session > .h-schedule-session {
+  margin-bottom: 0.5rem;
+  text-transform: none;
 }
 
-.legend--juniper:before {
-  background: #ba2e53;
-}
-
-.legend--juniper:hover:before {
-  background: #d71145;
-}
-
-.schedule-session--juniper {
-  border-color: #ba2e53;
-}
-.schedule-session--juniper:hover {
-  border-color: #d71145;
-}
-.schedule-session--juniper > .schedule-talk > a:hover {
-  color: #d71145;
+.schedule-session > .schedule-speaker__photo {
+  width: 8rem;
+  border-radius: 4rem;
+  border: 4px solid #ddd;
+  position: absolute;
+  top: 0;
+  left: -4rem;
 }
 
 .pricing {
