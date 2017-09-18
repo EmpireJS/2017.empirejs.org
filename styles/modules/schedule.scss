@@ -1,115 +1,100 @@
-$sycamore: #a6858b;
-$acacia: #8d9e54;
-$buckthorn: #b0b5bf;
-$juniper: #ba2e53;
-
-.schedule { margin-bottom: 1rem; }
-.schedule-row > .schedule-session {
-  background: rgba(240, 240, 240, 0.5);
-  font-size: 0.9rem;
-  &:hover { background: rgba(255, 247, 188, 0.1); }
+.schedule { 
+  margin-bottom: 1rem; 
+  display: none;
 }
-.schedule-block--center { text-align: center; }
-.schedule-block--middle > h5 {
-  line-height: 6rem;
-  margin-bottom: 0;
-}
-.schedule-session {
-  border-left: 4px solid transparent;
-  margin: 0.2rem 0;
-  padding: 0.5rem;
-  min-height: 7rem;
-}
-.schedule-time {
-  background: #ccc;
-  text-align: center;
-  padding: 0.25rem;
-}
-.schedule-location,
-.schedule-talk,
-.schedule-speaker {
-  line-height: inherit;
-  margin: 0.5rem 0;
+.schedule--active {
   display: block;
 }
-.schedule-talk > a {
-  color: #333;
+
+.schedule-day-list .schedule-day-item {
+  padding: 0.5rem 2.5rem;
+}
+.schedule-day-item {
+  background-color: $gray;
+  color: $white;
   text-decoration: none;
+  & > .schedule-day-list__title {
+    color: $white;
+  }
 }
 
-.grid--narrow > .schedule-row > .grid__item { padding-left: 4px; }
-
-.legend-key {
-  text-align: center;
-  margin: 1rem 0;
-}
-.legend {
-  margin: 0 0.5rem;
-  text-transform: uppercase;
-  white-space: nowrap;
-  &:before {
-    content: "";
+.schedule-day-item--active {
+  background-color: $yellow;
+  color: $gray;
+  position: relative;
+  & > .schedule-day-list__title {
+    color: $gray;
+  }
+  &::before {
+    border: none;
+    content: '';
     display: inline-block;
-    height: 1rem;
-    width: 1rem;
-    vertical-align: middle;
-    background: #DDD;
-    margin: -0.5rem 0.5em 0 0;
+    height: 0;
+    width: 0;
+    border-left: 0.8rem solid transparent;
+    border-right: 0.8rem solid transparent;
+    border-top: 0.8rem solid $yellow;
+    position: absolute;
+    bottom: -0.8rem;
+    left: 40%;
   }
 }
 
-.legend--sycamore:before {
-  background: $sycamore;
-}
-.legend--sycamore:hover:before {
-  background: saturate($sycamore, 25%);
-}
-.schedule-session--sycamore {
-  border-color: $sycamore;
-  &:hover {
-    border-color: saturate($sycamore, 25%);
-  }
-  & > .schedule-talk > a:hover { color: saturate($sycamore, 25%); }
+.schedule-day-list__title {
+  margin-bottom: 1rem;
 }
 
-.legend--acacia:before {
-  background: $acacia;
-}
-.legend--acacia:hover:before {
-  background: saturate($acacia, 25%);
-}
-.schedule-session--acacia {
-  border-color: $acacia;
-  &:hover {
-    border-color: saturate($acacia, 25%);
-  }
-  & > .schedule-talk > a:hover { color: saturate($acacia, 25%); }
+.schedule-day-list__date {
+  font-weight: normal;
 }
 
-.legend--buckthorn:before {
-  background: $buckthorn;
-}
-.legend--buckthorn:hover:before {
-  background: saturate($buckthorn, 25%);
-}
-.schedule-session--buckthorn {
-  border-color: $buckthorn;
-  &:hover {
-    border-color: saturate($buckthorn, 25%);
-  }
-  & > .schedule-talk > a:hover { color: saturate($buckthorn, 25%); }
+.schedule-time {
+  background: $purple;
+  color: $white;
+  text-align: center;
+  padding: 0.25rem;
+  margin: 0.5rem 0;
 }
 
-.legend--juniper:before {
-  background: $juniper;
-}
-.legend--juniper:hover:before {
-  background: saturate($juniper, 25%);
-}
-.schedule-session--juniper {
-  border-color: $juniper;
-  &:hover {
-    border-color: saturate($juniper, 25%);
+.schedule-announcement {
+  text-align: center;
+  & > h3 {
+    font-size: 1rem;
+    margin: 0.75rem 0;
   }
-  & > .schedule-talk > a:hover { color: saturate($juniper, 25%); }
+}
+
+.schedule-session {
+  border-left: 2px solid #ddd;
+  padding: 1rem 2rem 0.1rem 6rem;
+  margin-left: 4rem;
+  position: relative;
+}
+
+.schedule-session > .schedule-session__body {
+  font-size: 0.85rem;
+}
+
+.schedule-session__body > p {
+  margin-bottom: 0.75rem;
+}
+
+.schedule-session > .schedule-speaker__name {
+  margin-bottom: 1rem;
+  text-transform: none;
+  color: $pink;
+}
+
+.schedule-session > .h-schedule-session {
+  margin-bottom: 0.5rem;
+  text-transform: none;
+}
+
+.schedule-session > .schedule-speaker__photo {
+  width: 8rem;
+  border-radius: 4rem;
+  border: 4px solid #ddd;
+  position: absolute;
+  top: 0;
+  left: -4rem;
 }
