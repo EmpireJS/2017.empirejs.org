@@ -4110,6 +4110,15 @@ a:hover {
   display: block;
 }
 
+@media only screen and (max-width: 49.9rem) {
+  .schedule-day-list > li {
+    display: list-item;
+  }
+  .schedule-day-list > li > a {
+    display: block;
+  }
+}
+
 .schedule-day-list .schedule-day-item {
   padding: 0.5rem 2.5rem;
 }

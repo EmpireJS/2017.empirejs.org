@@ -6,6 +6,16 @@
   display: block;
 }
 
+.schedule-day-list {
+  @include media-query(palm) {
+    > li{
+      display:list-item;
+      > a{
+          display:block;
+      }
+    }
+  }
+}
 .schedule-day-list .schedule-day-item {
   padding: 0.5rem 2.5rem;
 }
