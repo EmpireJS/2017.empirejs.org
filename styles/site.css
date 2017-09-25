@@ -834,7 +834,7 @@ textarea:focus {
  * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
  * and over in your markup.
  */
-.cf:after, .nav:after {
+.cf:after, .nav:after, .media:after {
   content: "";
   display: table;
   clear: both;
@@ -1816,6 +1816,65 @@ label,
 }
 .nav--keywords > li:last-child:after {
   display: none;
+}
+
+/*------------------------------------*\
+    $MEDIA
+\*------------------------------------*/
+/**
+ * Place any image- and text-like content side-by-side, as per:
+ * stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+ * E.g.:
+ *
+   <div class=media>
+       <img src=http://placekitten.com/200/300 alt="" class=media__img>
+       <p class=media__body>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+   </div>
+ *
+ * Demo: jsfiddle.net/inuitcss/cf4Qs
+ *
+ */
+.media {
+  display: block;
+}
+
+.media__img {
+  float: left;
+  margin-right: 24px;
+}
+
+/**
+ * Reversed image location (right instead of left).
+ */
+.media__img--rev {
+  float: right;
+  margin-left: 24px;
+}
+
+.media__img img,
+.media__img--rev img {
+  display: block;
+}
+
+.media__body {
+  overflow: hidden;
+}
+
+.media__body,
+.media__body > :last-child {
+  margin-bottom: 0;
+}
+
+/**
+ * `.img`s in `.islet`s need an appropriately sized margin.
+ */
+.islet .media__img {
+  margin-right: 12px;
+}
+
+.islet .media__img--rev {
+  margin-left: 12px;
 }
 
 /*------------------------------------*\
@@ -4153,6 +4212,11 @@ a:hover {
   bottom: -0.8rem;
   left: 40%;
 }
+@media only screen and (max-width: 49.9rem) {
+  .schedule-day-item--active::before {
+    left: 50%;
+  }
+}
 
 .schedule-day-list__title {
   margin-bottom: 1rem;
@@ -4435,6 +4499,15 @@ a:hover {
 @media only screen and (min-width: 1200px) {
   .container {
     width: 1170px;
+  }
+}
+
+.hotel-info__img > img {
+  width: 80%;
+}
+@media only screen and (max-width: 49.9rem) {
+  .hotel-info__img {
+    text-align: center;
   }
 }
 
