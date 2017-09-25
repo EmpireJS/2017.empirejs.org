@@ -47,6 +47,9 @@
     position: absolute;
     bottom: -0.8rem;
     left: 40%;
+    @include media-query(palm) {
+      left: 50%;
+    }
   }
 }
 

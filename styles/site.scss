@@ -137,4 +137,12 @@
     }
 }
 
+.hotel-info__img {
+    & > img {
+        width: 80%;
+    }
+    @include media-query(palm) {
+        text-align: center;
+    }
+}
 .responsive-image { max-width: 100%; }
