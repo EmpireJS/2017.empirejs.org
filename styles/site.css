@@ -4248,6 +4248,13 @@ a:hover {
   margin-left: 4rem;
   position: relative;
 }
+@media only screen and (max-width: 49.9rem) {
+  .schedule-session {
+    border-left: none;
+    padding-left: 1rem;
+    margin-left: 0;
+  }
+}
 
 .schedule-session > .schedule-session__body {
   font-size: 0.85rem;
@@ -4275,6 +4282,11 @@ a:hover {
   position: absolute;
   top: 0;
   left: -4rem;
+}
+@media only screen and (max-width: 49.9rem) {
+  .schedule-session > .schedule-speaker__photo {
+    display: none;
+  }
 }
 
 .pricing {

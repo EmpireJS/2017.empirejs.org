@@ -82,6 +82,11 @@
   padding: 1rem 2rem 0.1rem 6rem;
   margin-left: 4rem;
   position: relative;
+  @include media-query(palm) {
+    border-left: none;
+    padding-left: 1rem;
+    margin-left: 0;
+  }
 }
 
 .schedule-session > .schedule-session__body {
@@ -110,4 +115,7 @@
   position: absolute;
   top: 0;
   left: -4rem;
+  @include media-query(palm) {
+    display: none;
+  }
 }
