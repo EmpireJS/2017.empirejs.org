@@ -4241,6 +4241,10 @@ a:hover {
   font-size: 1rem;
   margin: 0.75rem 0;
 }
+.schedule-announcement > h4 {
+  font-size: 1rem;
+  text-transform: none;
+}
 
 .schedule-session {
   border-left: 2px solid #ddd;
