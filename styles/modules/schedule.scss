@@ -1,5 +1,5 @@
-.schedule { 
-  margin-bottom: 1rem; 
+.schedule {
+  margin-bottom: 1rem;
   display: none;
 }
 .schedule--active {
@@ -74,6 +74,10 @@
   & > h3 {
     font-size: 1rem;
     margin: 0.75rem 0;
+  }
+  & > h4 {
+    font-size: 1rem;
+    text-transform: none;
   }
 }
 
